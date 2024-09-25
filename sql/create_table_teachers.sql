@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS teachers; 
+CREATE TABLE teachers (
+     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+     fullname STRING
+);
