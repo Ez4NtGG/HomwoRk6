@@ -12,7 +12,6 @@ logger = logging.getLogger(__name__)
 def create_connection():
     """ create a database connection to a sqlite database """
     try:
-        # conn = psycopg2.connect(host='localhost', database='test', user='postgres', password='567234')
         database_path = Path("db")
         database_path.mkdir(exist_ok=True, parents=True)
         conn = connect(database_path.joinpath("hw06.sqlite"))

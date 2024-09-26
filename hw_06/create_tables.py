@@ -40,7 +40,6 @@ def create_tables(skip_created: bool = False) -> bool:
                             encoding="utf-8"
                         )
                         sql_script = sql_skip_created(sql_script, skip_created)
-                        # logger.info(f"{sql_script=}")
                     except OSError as e:
                         logger.error(f"ERROR OPEN SQL : {e}")
                         raise RuntimeError

@@ -138,7 +138,6 @@ def seed_grade(cur: Cursor):
     for _ in range(TOTAL_GRADES):
         random_discipline = randint(1, len(disciplines))
         random_group = randint(1, len(groups))
-        # random_students = [randint(1, TOTAL_STUDENTS) for _ in range(randint(3, 12))]
         group_students = get_group_students(cur, random_group)
         max_random_students_in_group = min(12, len(group_students))
         min_random_students_in_group = min(3, len(group_students))
@@ -146,7 +145,6 @@ def seed_grade(cur: Cursor):
             group_students,
             randint(min_random_students_in_group, max_random_students_in_group),
         )
-        # random_students = []
         random_date_of = get_day()
         for random_student in random_students:
             random_grade = randint(30, 100)
